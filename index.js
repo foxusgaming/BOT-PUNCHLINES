@@ -158,10 +158,16 @@ client.on('messageCreate', message => {
       return message.channel.send("Tu crois vraiment pouvoir punch le bot ? Mauvaise idée...");
     }
 
-    // si quelqu'un te punch
-    if (user.id === "1258841903575597117") {
-      return message.channel.send("On ne clash pas le BOSS sale chienne 😎");
-    }
+    // Liste des comptes protégés
+const protectedUsers = [
+  "1258841903575597117", // premier compte
+  "1011257897734389790" // <-- remplace par le vrai ID
+];
+
+// si quelqu'un punch un compte protégé
+if (protectedUsers.includes(user.id)) {
+  return message.channel.send("On ne clash pas le BOSS sale chienne 😎");
+}
 
     const randomPunch = punchlines[Math.floor(Math.random() * punchlines.length)];
     message.channel.send(`${user}, ${randomPunch}`);
