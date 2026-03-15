@@ -129,12 +129,21 @@ client.once('ready', () => {
 });
 
 client.on('messageCreate', message => {
-  if (!message.guild) return; // ignore les messages privés
+  if (!message.guild) return;
+
   if (message.content.startsWith('!punch')) {
+
     const user = message.mentions.users.first();
+
     if (!user) {
       return message.channel.send("Tu dois mentionner quelqu'un !");
     }
+
+    // si quelqu'un punch le bot
+    if (user.id === client.user.id) {
+      return message.channel.send("😎 Tu crois vraiment pouvoir punch le bot ? Mauvaise idée... Salope que tu es.");
+    }
+
     const randomPunch = punchlines[Math.floor(Math.random() * punchlines.length)];
     message.channel.send(`${user}, ${randomPunch}`);
   }
