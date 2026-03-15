@@ -20,6 +20,7 @@ const TOKEN = process.env.TOKEN || 'TON_TOKEN_ICI';
 
 // Liste complète de tes punchlines (ici juste un extrait, ajoute toutes tes 500+ punchlines)
 const punchlines = [
+"T'inquiète t'auras pas la calvitie a ton big daron par ce que lui ne l'avais pas a ton âge.",
 "T'es tellement moche que Google Maps te demande la confirmation pour te localiser.",
 "Ton existence est la preuve que la nature fait des erreurs.",
 "Si le con était une science, tu serais prix Nobel.",
