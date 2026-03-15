@@ -141,7 +141,12 @@ client.on('messageCreate', message => {
 
     // si quelqu'un punch le bot
     if (user.id === client.user.id) {
-      return message.channel.send("😎 Tu crois vraiment pouvoir punch le bot ? Mauvaise idée... Salope que tu es.");
+      return message.channel.send("Tu crois vraiment pouvoir punch le bot ? Mauvaise idée...");
+    }
+
+    // si quelqu'un te punch
+    if (user.id === "1258841903575597117") {
+      return message.channel.send("On ne clash pas le BOSS sale chienne 😎");
     }
 
     const randomPunch = punchlines[Math.floor(Math.random() * punchlines.length)];
