@@ -140,4 +140,4 @@ client.on('messageCreate', message => {
   }
 });
 
-const TOKEN = process.env.TOKEN;
+client.login(TOKEN);
